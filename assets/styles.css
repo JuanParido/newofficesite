@@ -5758,7 +5758,8 @@ button.close {
     display: none !important; } }
 #ns_body {
   max-width: 1180px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 80px; }
   #ns_body a {
     text-decoration: none;
     color: inherit; }
@@ -5779,7 +5780,12 @@ button.close {
     #ns_body #ns_navbar a:hover {
       color: white; }
   #ns_body #ns_header .navbar {
-    border-radius: 0; }
+    border-radius: 0;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px; }
   #ns_body .ns_carousel {
     margin-top: -20px; }
     #ns_body .ns_carousel#section .unslider-nav, #ns_body .ns_carousel#section .unslider-arrow {
