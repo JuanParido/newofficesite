@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to the new site</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/unslider.css">
+</head>
+<body id="ns_body">
+  <header id="ns_header">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#ns_navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand"><img src="assets/nokiaMainLogo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="ns_navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Location</a></li>
+            <li><a href="#">The site</a></li>
+            <li><a href="#">Useful info</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="ns_carousel">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="ns_slider">
+             <ul><li><a href="section.html"><img src="http://placehold.it/700x250"></a></li><li><a href="section.html"><img src="http://placehold.it/700x250"></a></li><li><a href="section.html"><img src="http://placehold.it/700x250"></a></li><li><a href="section.html"><img src="http://placehold.it/700x250"></a></li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ns_tiles">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <a href="section.html"><div class="ns_tile_element" id="element_with_image">
+            <img class="col-xs-6 col-sm-6 col-md-6 image-left" src="http://placehold.it/240x240" alt="">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <h2>Tile</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut quisquam repudiandae, tenetur quos ullam. Suscipit nobis nostrum qui sit harum, ad quos quis provident, maiores, porro labore excepturi laborum?</p>
+            </div>
+          </div></a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <a href="section.html"><div class="ns_tile_element" id="element_with_image">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <h2>Tile</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut quisquam repudiandae, tenetur quos ullam. Suscipit nobis nostrum qui sit harum, ad quos quis provident, maiores, porro labore excepturi laborum?</p>
+            </div>
+            <img class="col-xs-6 col-sm-6 col-md-6 image-right" src="http://placehold.it/240x240" alt="">
+          </div></a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <a href="section.html"><div class="ns_tile_element" id="element_without_image">
+            <div class="col-xs-12">
+              <h2>Long tile</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt doloremque, minus sapiente eum itaque ut aperiam dolorem possimus totam, deleniti, dolorum quos ipsam fugiat at impedit illum similique dicta officiis.</p>
+            </div>
+          </div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ns_accordion">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <a href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    Collapsible Item 1
+                  </h4>
+                </div>
+              </a>
+              <div class="panel-collapse collapse in" id="collapse1">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt tempora autem dolore quod rerum voluptates! Ab, tenetur officia fugiat sint ipsum iste deserunt ipsa pariatur quam! Autem, sint, illum.</div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <a href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    Collapsible Item 2
+                  </h4>
+                </div>
+              </a>
+              <div class="panel-collapse collapse" id="collapse2">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt tempora autem dolore quod rerum voluptates! Ab, tenetur officia fugiat sint ipsum iste deserunt ipsa pariatur quam! Autem, sint, illum.</div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <a href="#collapse3" data-toggle="collapse" data-parent="#accordion">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    Collapsible Item 3
+                  </h4>
+                </div>
+              </a>
+              <div class="panel-collapse collapse" id="collapse3">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt tempora autem dolore quod rerum voluptates! Ab, tenetur officia fugiat sint ipsum iste deserunt ipsa pariatur quam! Autem, sint, illum.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="ns_footer">
+    <span>© Nokia 2017</span>
+  </footer>
+  <script src="assets/jquery-3.1.1.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script>
+  <script src="assets/unslider.js"></script>
+  <script>
+    $(function(){
+      $('.ns_slider').unslider()
+    })
+  </script>
+</body>
+</html>
