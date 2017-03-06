@@ -5766,7 +5766,7 @@ button.close {
     #ns_body .navbar-header {
       text-align: center; } }
   #ns_body .navbar-header .navbar-brand img {
-    width: 150px;
+    width: 100px;
     height: auto; }
   @media screen and (max-width: 767px) {
     #ns_body .navbar-header .navbar-brand {
@@ -5774,9 +5774,12 @@ button.close {
       float: initial;
       padding-left: 60px; } }
   #ns_body #ns_navbar a {
-    color: #dedede; }
+    color: #dedede;
+    text-transform: uppercase; }
     #ns_body #ns_navbar a:hover {
       color: white; }
+  #ns_body #ns_header .navbar {
+    border-radius: 0; }
   #ns_body .ns_carousel {
     margin-top: -20px; }
     #ns_body .ns_carousel#section .unslider-nav, #ns_body .ns_carousel#section .unslider-arrow {
