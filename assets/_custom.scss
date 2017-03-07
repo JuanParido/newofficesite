@@ -1,9 +1,12 @@
 $nokia-font: 'NokianvirallinenkirjasinREGULAR';
 $break-small: 767px;
 #ns_body {
+  min-height: 100vh;
   max-width: 1180px;
   margin: 0 auto;
   padding-top: 80px;
+  padding-bottom: 30px;
+  position: relative;
   a {
     text-decoration: none;
     color: inherit;
@@ -142,9 +145,12 @@ $break-small: 767px;
   //FOOTER
   .ns_footer {
     background: #222222;
+    bottom: 0;
     color: white;
     padding: 10px;
+    position: absolute;
     text-align: center;
-    width: 100%;
+    left: 0;
+    right: 0;
   }
 }
