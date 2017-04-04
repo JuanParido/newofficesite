@@ -1,156 +1,225 @@
-$nokia-font: 'NokianvirallinenkirjasinREGULAR';
 $break-small: 767px;
+
+@mixin shadow-box() {
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.09);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.09);
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.09);
+}
 #ns_body {
-  min-height: 100vh;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding-top: 80px;
-  padding-bottom: 30px;
-  position: relative;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  // HEADER
-  .navbar-header {
-    @media screen and (max-width: $break-small) {
-      text-align: center;
-    }
-    .navbar-brand {
-      img {
-        width: 100px;
-        height: auto;
-      }
-      @media screen and (max-width: $break-small) {
-        display: inline-block;
-        float: initial;
-        padding-left: 60px;
-      }
-    }
-  }
-  #ns_navbar {
-    a {
-      color: #dedede;
-      text-transform: uppercase;
-      &:hover {
-        color: white;
-      }
-    }
-  }
-  #ns_header {
-    .navbar {
-      border-radius: 0;
-      max-width: 1200px;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  }
-  //SLIDER
-  .ns_carousel {
-    &#section {
-      .unslider-nav, .unslider-arrow {
-        display: none;
-      }
-    }
-    margin-top: -20px;
-    .unslider {
-      margin-bottom: 20px;
-      overflow: hidden;
-      .ns_slider {
-        img {
-          width: 100%;
-        }
-      }
-      .unslider-nav {
-        margin-top: -20px;
-        position: relative;
-        z-index: 2;
-        ol {
-          li {
-            background: #dcdcdc;
-            border: 1px solid #b5b5b5;
-            border-radius: 50%;
-            height: 12px;
-            width: 12px;
-            &.unslider-active {
-              background: white;
-            }
-          }
-        }
-      }
-      .unslider-arrow {
-        top: 45%;
-        width: 32px;
-        height: 32px;
-        right: 30px;
-        left: auto;
-        overflow: hidden;
-        background: rgba(0, 0, 0, 0.2) no-repeat 50% 50%;
-        background-image: url('slider-arrow-right.png');
-        border-radius: 32px;
-        text-indent: -999em;
-        &.prev {
-          left: 30px;
-          right: auto;
-          transform: rotate(-180deg);
-        }
-      }
-    }
-  }
-  //TILES
-  .ns_tiles {
-    .ns_tile_element {
-      border: 1px solid #ddd;
-      margin-bottom: 10px;
-      overflow: hidden;
-      @media screen and (max-width: $break-small) {
-      }
-      &#element_with_image {
-        h2 {
-          display: inline-block;
-          text-transform: uppercase;
-        }
-        img {
-          width: 50%;
-          &.image-right {
-            padding-right: 0;
-          }
-          &.image-left {
-            padding-left: 0;
-          }
-        }
-      }
-      &#element_without_image {
-        img {
-          display: block;
-          margin: 0 auto;
-        }
-      }
-    }
-  }
-  //ACCORDION
-  .ns_accordion {
-    a {
-      &:hover, &:focus, &:active {
-        text-decoration: none;
-      }
-    }
-    .panel-heading {
-      background: #222222;
-      color: white;
-    }
-  }
-  //FOOTER
-  .ns_footer {
-    background: #222222;
-    bottom: 0;
-    color: white;
-    padding: 10px;
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-  }
+	font-family: $nokiafont-light;
+	min-height: 100vh;
+	max-width: 1180px;
+	margin: 0 auto;
+	padding-top: 80px;
+	padding-bottom: 30px;
+	position: relative;
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	// HEADER
+	.navbar-header {
+		@media screen and (max-width: $break-small) {
+			text-align: center;
+		}
+		.navbar-brand {
+			img {
+				height: auto;
+				margin-top: -3px;
+				width: 200px;
+			}
+			@media screen and (max-width: $break-small) {
+				display: inline-block;
+				float: initial;
+				padding-left: 60px;
+			}
+		}
+	}
+	#ns_navbar {
+		a {
+			color: #dedede;
+			text-transform: uppercase;
+		}
+		.nav {
+			&.navbar-nav {
+				li {
+					&.active {
+						a {
+							color: white;
+							background: #124178;
+						}
+					}
+				}
+				a {
+					&:hover, &:active, &:focus {
+						color: white;
+						background: #124178;
+					}
+				}
+			}
+		}
+	}
+
+	#ns_header {
+		.navbar {
+			background: #1456a2;
+			border-color: #032e5f;
+			border-radius: 0;
+			max-width: 1200px;
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	//SLIDER
+	.ns_carousel {
+		.fayer-layer {
+	    background: rgba(0, 0, 0, 0.7);
+	    z-index: 10;
+	    right: 0;
+	    bottom: -20px;
+	    color: white;
+	    font-size: 12px;
+	    height: 100%;
+	    padding: 20px 10px;
+	    @media screen and (max-width:992px) {
+				margin-bottom: 10px;
+			}
+		 }
+		&#section {
+			.unslider-nav, .unslider-arrow {
+				display: none;
+			}
+		}
+		margin-top: -20px;
+		.unslider {
+			margin-bottom: 20px;
+			overflow: hidden;
+			@media screen and (max-width:992px) {
+				margin-bottom: 10px;
+			}
+			.ns_slider {
+				li {
+					background: #363636;
+				}
+				img {
+					display: inherit;
+					height: 80%;
+					margin: 0 auto;
+					text-align: center;
+					width: auto;
+				}
+			}
+			.unslider-nav {
+				margin-top: -20px;
+				position: relative;
+				z-index: 2;
+				ol {
+					li {
+						background: #dcdcdc;
+						border: 1px solid #b5b5b5;
+						border-radius: 50%;
+						height: 12px;
+						width: 12px;
+						&.unslider-active {
+							background: white;
+						}
+					}
+				}
+			}
+			.unslider-arrow {
+				top: 45%;
+				width: 32px;
+				height: 32px;
+				right: 30px;
+				left: auto;
+				overflow: hidden;
+				background: rgba(0, 0, 0, 0.2) no-repeat 50% 50%;
+				background-image: url('slider-arrow-right.png');
+				border-radius: 32px;
+				text-indent: -999em;
+				&.prev {
+					left: 30px;
+					right: auto;
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+	//TILES
+	.ns_tiles {
+		.ns_tile_element {
+			border: 1px solid #e6e6e6;
+			margin-bottom: 10px;
+			overflow: hidden;
+			@include shadow-box();
+			transition: all .3s ease;
+			&:hover {
+				transform: scale(1.01);
+				@include shadow-box();
+			}
+			@media screen and (max-width: $break-small) {
+			}
+			&#element_with_image {
+				h2 {
+					display: inline-block;
+					text-transform: uppercase;
+				}
+				img {
+					width: 50%;
+					&.image-right {
+						padding-right: 0;
+					}
+					&.image-left {
+						padding-left: 0;
+					}
+				}
+			}
+			&#element_without_image {
+				h2 {
+					text-transform: uppercase;
+				}
+				padding-bottom: 25px;
+				.image-right {
+					padding-right: 0;
+				}
+				.image-left {
+					padding-left: 0;
+				}
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+	//ACCORDION
+	.ns_accordion {
+		a {
+			&:hover, &:focus, &:active {
+				text-decoration: none;
+			}
+		}
+		.panel-heading {
+			background: #426791;
+			border-color: #032e5f;
+			color: white;
+			h4 {
+				text-transform: uppercase;
+			}
+		}
+	}
+	//FOOTER
+	.ns_footer {
+		background: #1456a2;
+		border-color: #032e5f;
+		bottom: 0;
+		color: white;
+		padding: 10px;
+		position: absolute;
+		text-align: center;
+		left: 0;
+		right: 0;
+	}
 }
