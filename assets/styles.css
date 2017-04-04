@@ -5794,6 +5794,9 @@ Font-face config
   #ns_body a {
     text-decoration: none;
     color: inherit; }
+    #ns_body a.standard {
+      text-decoration: underline;
+      color: #0366d6; }
   @media screen and (max-width: 767px) {
     #ns_body .navbar-header {
       text-align: center; } }
@@ -5887,14 +5890,16 @@ Font-face config
     border: 1px solid #e6e6e6;
     margin-bottom: 10px;
     overflow: hidden;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.09);
-    -webkit-transition: all .3s ease;
-            transition: all .3s ease; }
-    #ns_body .ns_tiles .ns_tile_element:hover {
-      -webkit-transform: scale(1.01);
-          -ms-transform: scale(1.01);
-              transform: scale(1.01);
-      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.09); }
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.09); }
+    #ns_body .ns_tiles .ns_tile_element.home {
+      cursor: pointer;
+      -webkit-transition: all .3s ease;
+              transition: all .3s ease; }
+      #ns_body .ns_tiles .ns_tile_element.home:hover {
+        -webkit-transform: scale(1.01);
+            -ms-transform: scale(1.01);
+                transform: scale(1.01);
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.09); }
     #ns_body .ns_tiles .ns_tile_element#element_with_image h2 {
       display: inline-block;
       text-transform: uppercase; }

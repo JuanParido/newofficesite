@@ -16,6 +16,10 @@ $break-small: 767px;
 	a {
 		text-decoration: none;
 		color: inherit;
+		&.standard {
+			text-decoration: underline;
+			color: #0366d6;
+		}
 	}
 	// HEADER
 	.navbar-header {
@@ -154,10 +158,13 @@ $break-small: 767px;
 			margin-bottom: 10px;
 			overflow: hidden;
 			@include shadow-box();
-			transition: all .3s ease;
-			&:hover {
-				transform: scale(1.01);
-				@include shadow-box();
+			&.home {
+				cursor: pointer;
+				transition: all .3s ease;
+				&:hover {
+					transform: scale(1.01);
+					@include shadow-box();
+				}
 			}
 			@media screen and (max-width: $break-small) {
 			}
