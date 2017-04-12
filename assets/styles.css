@@ -5786,7 +5786,6 @@ Font-face config
 #ns_body {
   font-family: "NokiaPureTWebLight";
   min-height: 100vh;
-  max-width: 1180px;
   margin: 0 auto;
   padding-top: 80px;
   padding-bottom: 30px;
@@ -5797,6 +5796,9 @@ Font-face config
     #ns_body a.standard {
       text-decoration: underline;
       color: #0366d6; }
+  #ns_body .ns_container {
+    margin: 0 auto;
+    max-width: 90%; }
   @media screen and (max-width: 767px) {
     #ns_body .navbar-header {
       text-align: center; } }
@@ -5822,11 +5824,14 @@ Font-face config
     background: #1456a2;
     border-color: #032e5f;
     border-radius: 0;
-    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px; }
+  #ns_body #ns_header .flag {
+    height: 15px;
+    width: 20px;
+    background: white; }
   #ns_body .ns_carousel {
     margin-top: -20px; }
     #ns_body .ns_carousel .fayer-layer {
@@ -5835,9 +5840,10 @@ Font-face config
       right: 0;
       bottom: -20px;
       color: white;
-      font-size: 12px;
+      font-size: 13.5px;
       height: 100%;
-      padding: 20px 10px; }
+      padding: 20px;
+      margin-bottom: 20px; }
       @media screen and (max-width: 992px) {
         #ns_body .ns_carousel .fayer-layer {
           margin-bottom: 10px; } }
@@ -5886,6 +5892,8 @@ Font-face config
           -webkit-transform: rotate(-180deg);
               -ms-transform: rotate(-180deg);
                   transform: rotate(-180deg); }
+  #ns_body .ns_tiles .row {
+    margin-bottom: 30px; }
   #ns_body .ns_tiles .ns_tile_element {
     border: 1px solid #e6e6e6;
     margin-bottom: 10px;
@@ -5922,6 +5930,8 @@ Font-face config
         margin: 0 auto; }
   #ns_body .ns_accordion a:hover, #ns_body .ns_accordion a:focus, #ns_body .ns_accordion a:active {
     text-decoration: none; }
+  #ns_body .ns_accordion h2 {
+    text-transform: uppercase; }
   #ns_body .ns_accordion .panel-heading {
     background: #426791;
     border-color: #032e5f;
@@ -5938,3 +5948,128 @@ Font-face config
     text-align: center;
     left: 0;
     right: 0; }
+
+.ns_timeline .timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative; }
+.ns_timeline .timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px; }
+.ns_timeline .timeline > li {
+  margin-bottom: 20px;
+  position: relative; }
+.ns_timeline .timeline > li:before,
+.ns_timeline .timeline > li:after {
+  content: " ";
+  display: table; }
+.ns_timeline .timeline > li:after {
+  clear: both; }
+.ns_timeline .timeline > li:before,
+.ns_timeline .timeline > li:after {
+  content: " ";
+  display: table; }
+.ns_timeline .timeline > li:after {
+  clear: both; }
+.ns_timeline .timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175); }
+.ns_timeline .timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " "; }
+.ns_timeline .timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " "; }
+.ns_timeline .timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%; }
+.ns_timeline .timeline > li.timeline-inverted > .timeline-panel {
+  float: right; }
+.ns_timeline .timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto; }
+.ns_timeline .timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto; }
+.ns_timeline .timeline-badge.primary {
+  background-color: #2e6da4 !important; }
+.ns_timeline .timeline-badge.success {
+  background-color: #3f903f !important; }
+.ns_timeline .timeline-badge.warning {
+  background-color: #f0ad4e !important; }
+.ns_timeline .timeline-badge.danger {
+  background-color: #d9534f !important; }
+.ns_timeline .timeline-badge.info {
+  background-color: #5bc0de !important; }
+.ns_timeline .timeline-title {
+  margin-top: 0;
+  color: inherit; }
+.ns_timeline .timeline-body > p,
+.ns_timeline .timeline-body > ul {
+  margin-bottom: 0; }
+.ns_timeline .timeline-body > p + p {
+  margin-top: 5px; }
+@media (max-width: 767px) {
+  .ns_timeline ul.timeline:before {
+    left: 40px; }
+  .ns_timeline ul.timeline > li > .timeline-panel {
+    width: calc(100% - 90px); }
+  .ns_timeline ul.timeline > li > .timeline-badge {
+    left: 15px;
+    margin-left: 0;
+    top: 16px; }
+  .ns_timeline ul.timeline > li > .timeline-panel {
+    float: right; }
+  .ns_timeline ul.timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto; }
+  .ns_timeline ul.timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto; } }

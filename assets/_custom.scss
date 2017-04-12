@@ -8,7 +8,6 @@ $break-small: 767px;
 #ns_body {
 	font-family: $nokiafont-light;
 	min-height: 100vh;
-	max-width: 1180px;
 	margin: 0 auto;
 	padding-top: 80px;
 	padding-bottom: 30px;
@@ -20,6 +19,10 @@ $break-small: 767px;
 			text-decoration: underline;
 			color: #0366d6;
 		}
+	}
+	.ns_container {
+		margin: 0 auto;
+		max-width: 90%;
 	}
 	// HEADER
 	.navbar-header {
@@ -69,11 +72,15 @@ $break-small: 767px;
 			background: #1456a2;
 			border-color: #032e5f;
 			border-radius: 0;
-			max-width: 1200px;
 			margin-right: auto;
 			margin-left: auto;
 			padding-left: 15px;
 			padding-right: 15px;
+		}
+		.flag {
+			height: 15px;
+			width: 20px;
+			background: white;
 		}
 	}
 	//SLIDER
@@ -84,9 +91,10 @@ $break-small: 767px;
 	    right: 0;
 	    bottom: -20px;
 	    color: white;
-	    font-size: 12px;
+	    font-size: 13.5px;
 	    height: 100%;
-	    padding: 20px 10px;
+	    padding: 20px;
+	    margin-bottom: 20px;
 	    @media screen and (max-width:992px) {
 				margin-bottom: 10px;
 			}
@@ -153,6 +161,9 @@ $break-small: 767px;
 	}
 	//TILES
 	.ns_tiles {
+		.row {
+			margin-bottom: 30px;
+		}
 		.ns_tile_element {
 			border: 1px solid #e6e6e6;
 			margin-bottom: 10px;
@@ -207,6 +218,9 @@ $break-small: 767px;
 			&:hover, &:focus, &:active {
 				text-decoration: none;
 			}
+		}
+		h2 {
+			text-transform: uppercase;
 		}
 		.panel-heading {
 			background: #426791;
