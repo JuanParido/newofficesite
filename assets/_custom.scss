@@ -85,17 +85,46 @@ $break-small: 767px;
 	}
 	//SLIDER
 	.ns_carousel {
+		.carousel-long {
+			@media screen and (min-width: 1200px) {
+				height: 50vh;
+			}
+			li {
+				img {
+						width: 100%;
+						min-height: initial;
+					@media screen and (min-width:1200px) and (max-width:1360px) {
+						min-height: 50vh;
+						width: auto;
+					}
+				}
+			}
+		}
+		.bemvindos {
+		    padding: 10px;
+		    position: absolute;
+		    width: 50%;
+		    z-index: 11;
+		}
+		.ns-slider-col {
+			@media screen and (max-width:1360px) {
+				width: 100%;
+			}
+		}
 		.fayer-layer {
 	    background: rgba(0, 0, 0, 0.7);
-	    z-index: 10;
-	    right: 0;
 	    bottom: -20px;
 	    color: white;
-	    font-size: 13.5px;
-	    height: 100%;
-	    padding: 20px;
+	    font-size: 12.5px;
+	    height: 50vh;
 	    margin-bottom: 20px;
-	    @media screen and (max-width:992px) {
+	    line-height: 18px;
+	    padding: 20px;
+	    right: 0;
+	    z-index: 10;
+			@media screen and (max-width:1200px) {
+				font-size: 13px;
+				height: auto;
 				margin-bottom: 10px;
 			}
 		 }
@@ -105,6 +134,13 @@ $break-small: 767px;
 			}
 		}
 		margin-top: -20px;
+		height: 50vh;
+		overflow: hidden;
+		margin-bottom:10px;
+		position: relative;
+		@media screen and (max-width:1200px) {
+			height: auto;
+		}
 		.unslider {
 			margin-bottom: 20px;
 			overflow: hidden;
@@ -117,10 +153,10 @@ $break-small: 767px;
 				}
 				img {
 					display: inherit;
-					height: 80%;
+					// height: 80%;
 					margin: 0 auto;
 					text-align: center;
-					width: auto;
+					// width: 100%;
 				}
 			}
 			.unslider-nav {
@@ -151,6 +187,9 @@ $break-small: 767px;
 				background-image: url('slider-arrow-right.png');
 				border-radius: 32px;
 				text-indent: -999em;
+				@media screen and (min-width: 1200px){
+					top:40%;
+				}
 				&.prev {
 					left: 30px;
 					right: auto;
@@ -168,6 +207,7 @@ $break-small: 767px;
 			border: 1px solid #e6e6e6;
 			margin-bottom: 10px;
 			overflow: hidden;
+			position: relative;
 			@include shadow-box();
 			&.home {
 				cursor: pointer;
@@ -175,6 +215,33 @@ $break-small: 767px;
 				&:hover {
 					transform: scale(1.01);
 					@include shadow-box();
+					.cta {
+						background: #74b5ff;
+					}
+				}
+			}
+			&.cta-left, &.cta-right, &.cta-center {
+				.cta {
+					background: #4771a2;
+					bottom: 10px;
+					color: white;
+					display: inline-block;
+					padding: 2px 5px;
+					position: absolute;
+					transition: all .3s ease;
+					z-index: 11;
+				}
+			}
+			&.cta-left, &.cta-center {
+				.cta {
+					right: 0;
+				}
+			}
+			&.cta-center {
+				h2 {text-align:center;}
+				p {
+					text-align: center;
+					font-size: 15px;
 				}
 			}
 			@media screen and (max-width: $break-small) {

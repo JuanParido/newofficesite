@@ -5833,22 +5833,50 @@ Font-face config
     width: 20px;
     background: white; }
   #ns_body .ns_carousel {
-    margin-top: -20px; }
+    margin-top: -20px;
+    height: 50vh;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative; }
+    @media screen and (min-width: 1200px) {
+      #ns_body .ns_carousel .carousel-long {
+        height: 50vh; } }
+    #ns_body .ns_carousel .carousel-long li img {
+      width: 100%;
+      min-height: initial; }
+      @media screen and (min-width: 1200px) and (max-width: 1360px) {
+        #ns_body .ns_carousel .carousel-long li img {
+          min-height: 50vh;
+          width: auto; } }
+    #ns_body .ns_carousel .bemvindos {
+      padding: 10px;
+      position: absolute;
+      width: 50%;
+      z-index: 11; }
+    @media screen and (max-width: 1360px) {
+      #ns_body .ns_carousel .ns-slider-col {
+        width: 100%; } }
     #ns_body .ns_carousel .fayer-layer {
       background: rgba(0, 0, 0, 0.7);
-      z-index: 10;
-      right: 0;
       bottom: -20px;
       color: white;
-      font-size: 13.5px;
-      height: 100%;
+      font-size: 12.5px;
+      height: 50vh;
+      margin-bottom: 20px;
+      line-height: 18px;
       padding: 20px;
-      margin-bottom: 20px; }
-      @media screen and (max-width: 992px) {
+      right: 0;
+      z-index: 10; }
+      @media screen and (max-width: 1200px) {
         #ns_body .ns_carousel .fayer-layer {
+          font-size: 13px;
+          height: auto;
           margin-bottom: 10px; } }
     #ns_body .ns_carousel#section .unslider-nav, #ns_body .ns_carousel#section .unslider-arrow {
       display: none; }
+    @media screen and (max-width: 1200px) {
+      #ns_body .ns_carousel {
+        height: auto; } }
     #ns_body .ns_carousel .unslider {
       margin-bottom: 20px;
       overflow: hidden; }
@@ -5859,10 +5887,8 @@ Font-face config
         background: #363636; }
       #ns_body .ns_carousel .unslider .ns_slider img {
         display: inherit;
-        height: 80%;
         margin: 0 auto;
-        text-align: center;
-        width: auto; }
+        text-align: center; }
       #ns_body .ns_carousel .unslider .unslider-nav {
         margin-top: -20px;
         position: relative;
@@ -5886,6 +5912,9 @@ Font-face config
         background-image: url("slider-arrow-right.png");
         border-radius: 32px;
         text-indent: -999em; }
+        @media screen and (min-width: 1200px) {
+          #ns_body .ns_carousel .unslider .unslider-arrow {
+            top: 40%; } }
         #ns_body .ns_carousel .unslider .unslider-arrow.prev {
           left: 30px;
           right: auto;
@@ -5898,6 +5927,7 @@ Font-face config
     border: 1px solid #e6e6e6;
     margin-bottom: 10px;
     overflow: hidden;
+    position: relative;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.09); }
     #ns_body .ns_tiles .ns_tile_element.home {
       cursor: pointer;
@@ -5908,6 +5938,25 @@ Font-face config
             -ms-transform: scale(1.01);
                 transform: scale(1.01);
         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.09); }
+        #ns_body .ns_tiles .ns_tile_element.home:hover .cta {
+          background: #74b5ff; }
+    #ns_body .ns_tiles .ns_tile_element.cta-left .cta, #ns_body .ns_tiles .ns_tile_element.cta-right .cta, #ns_body .ns_tiles .ns_tile_element.cta-center .cta {
+      background: #4771a2;
+      bottom: 10px;
+      color: white;
+      display: inline-block;
+      padding: 2px 5px;
+      position: absolute;
+      -webkit-transition: all .3s ease;
+              transition: all .3s ease;
+      z-index: 11; }
+    #ns_body .ns_tiles .ns_tile_element.cta-left .cta, #ns_body .ns_tiles .ns_tile_element.cta-center .cta {
+      right: 0; }
+    #ns_body .ns_tiles .ns_tile_element.cta-center h2 {
+      text-align: center; }
+    #ns_body .ns_tiles .ns_tile_element.cta-center p {
+      text-align: center;
+      font-size: 15px; }
     #ns_body .ns_tiles .ns_tile_element#element_with_image h2 {
       display: inline-block;
       text-transform: uppercase; }
