@@ -207,6 +207,7 @@ $break-small: 767px;
 			border: 1px solid #e6e6e6;
 			margin-bottom: 10px;
 			overflow: hidden;
+			padding-bottom: 26px;
 			position: relative;
 			@include shadow-box();
 			&.home {
@@ -223,18 +224,16 @@ $break-small: 767px;
 			&.cta-left, &.cta-right, &.cta-center {
 				.cta {
 					background: #4771a2;
-					bottom: 10px;
+					bottom: 0;
 					color: white;
 					display: inline-block;
+					left: 0;
 					padding: 2px 5px;
 					position: absolute;
-					transition: all .3s ease;
-					z-index: 11;
-				}
-			}
-			&.cta-left, &.cta-center {
-				.cta {
 					right: 0;
+					transition: all .3s ease;
+					text-align: center;
+					z-index: 11;
 				}
 			}
 			&.cta-center {
