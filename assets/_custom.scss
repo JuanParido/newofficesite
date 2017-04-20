@@ -87,14 +87,14 @@ $break-small: 767px;
 	.ns_carousel {
 		.carousel-long {
 			@media screen and (min-width: 1200px) {
-				height: 50vh;
+				height: 60vh;
 			}
 			li {
 				img {
 						width: 100%;
 						min-height: initial;
 					@media screen and (min-width:1200px) and (max-width:1360px) {
-						min-height: 50vh;
+						min-height: 60vh;
 						width: auto;
 					}
 				}
@@ -116,7 +116,8 @@ $break-small: 767px;
 	    bottom: -20px;
 	    color: white;
 	    font-size: 12.5px;
-	    height: 50vh;
+	    height: 60vh;
+	    max-height: 60vh;
 	    margin-bottom: 20px;
 	    line-height: 18px;
 	    padding: 20px;
@@ -134,7 +135,10 @@ $break-small: 767px;
 			}
 		}
 		margin-top: -20px;
-		height: 50vh;
+		&.home {
+			height: 60vh;
+		}
+		max-height: 60vh;
 		overflow: hidden;
 		margin-bottom:10px;
 		position: relative;
